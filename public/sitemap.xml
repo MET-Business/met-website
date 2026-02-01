@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://met.example/</loc>
+  </url>
+  <url>
+    <loc>https://met.example/experience</loc>
+  </url>
+  <url>
+    <loc>https://met.example/how-it-works</loc>
+  </url>
+  <url>
+    <loc>https://met.example/partners</loc>
+  </url>
+  <url>
+    <loc>https://met.example/book</loc>
+  </url>
+</urlset>
