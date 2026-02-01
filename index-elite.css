@@ -2,24 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-display: "Fraunces", "Georgia", serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "Courier New", monospace;
+/* Elite Typography System */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
+:root {
+  /* Primary Font Stack */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  
+  /* Enhanced Color Palette */
   --color-ink: #0b0b0c;
   --color-charcoal: #111114;
   --color-gold: #caa24a;
   --color-gold-light: #d4af5f;
   --color-gold-dark: #b89038;
   --color-offwhite: #f5f2ea;
-
+  
+  /* Shadow System */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   --shadow-glow: 0 0 45px rgba(202, 162, 74, 0.15);
   --shadow-glow-strong: 0 0 60px rgba(202, 162, 74, 0.25);
+  
+  /* Animation Timing */
+  --timing-micro: 150ms;
+  --timing-standard: 300ms;
+  --timing-macro: 600ms;
+  --timing-page: 800ms;
+  
+  /* Easing Functions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 * {
@@ -33,11 +50,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Display Font for Headlines */
 .font-display {
   font-family: var(--font-display);
-  font-feature-settings: "ss01", "ss02";
+  font-feature-settings: 'ss01', 'ss02';
 }
 
+/* Elite Section Styles */
 .section-elite {
   @apply py-24 md:py-32;
 }
@@ -50,6 +69,7 @@ body {
   @apply mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-gold;
 }
 
+/* Elite Card System */
 .card-elite {
   @apply relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-charcoal/70 to-charcoal/50 p-6 backdrop-blur-sm transition-all duration-500;
   box-shadow: var(--shadow-glow);
@@ -61,28 +81,27 @@ body {
 }
 
 .card-elite::before {
-  content: "";
+  content: '';
   @apply absolute inset-0 opacity-0 transition-opacity duration-500;
-  background: radial-gradient(
-    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(202, 162, 74, 0.1),
-    transparent 50%
-  );
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(202, 162, 74, 0.1), transparent 50%);
 }
 
 .card-elite:hover::before {
   @apply opacity-100;
 }
 
+/* Feature Card (Larger) */
 .card-elite-feature {
   @apply card-elite p-8 md:p-10;
 }
 
+/* CTA Card */
 .card-elite-cta {
   @apply relative overflow-hidden rounded-3xl border border-gold/30 bg-gradient-to-br from-charcoal/90 to-ink/90 p-12 backdrop-blur-md md:p-16;
   box-shadow: var(--shadow-glow-strong);
 }
 
+/* Elite Badge */
 .badge-elite {
   @apply inline-flex items-center gap-2 rounded-full border border-white/15 bg-charcoal/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-offwhite/70 backdrop-blur-sm transition-all duration-300;
 }
@@ -91,6 +110,7 @@ body {
   @apply border-gold/40 bg-charcoal/90 text-offwhite;
 }
 
+/* Elite Button System */
 .button-elite-primary {
   @apply inline-flex items-center justify-center gap-2 rounded-full border border-gold/60 bg-gradient-to-r from-gold/20 to-gold/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-offwhite backdrop-blur-sm transition-all duration-300;
   box-shadow: 0 4px 16px rgba(202, 162, 74, 0.2);
@@ -114,10 +134,12 @@ body {
   @apply border-gold/40 bg-white/5 text-offwhite;
 }
 
+/* Bento Grid Layout */
 .bento-grid {
   @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
 }
 
+/* Animation Utilities */
 .animation-delay-100 {
   animation-delay: 100ms;
 }
@@ -138,10 +160,12 @@ body {
   animation-delay: 500ms;
 }
 
+/* Gradient Text */
 .gradient-text {
-  @apply bg-gradient-to-r from-gold via-gold-400 to-gold bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent;
 }
 
+/* Glow Effects */
 .glow-soft {
   box-shadow: 0 0 30px rgba(202, 162, 74, 0.1);
 }
@@ -154,6 +178,7 @@ body {
   box-shadow: 0 0 60px rgba(202, 162, 74, 0.25);
 }
 
+/* Elite Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -172,11 +197,13 @@ body {
   background: rgba(202, 162, 74, 0.3);
 }
 
+/* Selection */
 ::selection {
   background: rgba(202, 162, 74, 0.3);
   color: var(--color-offwhite);
 }
 
+/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
@@ -185,7 +212,7 @@ html {
   html {
     scroll-behavior: auto;
   }
-
+  
   *,
   *::before,
   *::after {
@@ -195,9 +222,9 @@ html {
   }
 }
 
+/* Custom Animations */
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
   50% {
@@ -206,8 +233,7 @@ html {
 }
 
 @keyframes pulse-glow {
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 0 20px rgba(202, 162, 74, 0.2);
   }
   50% {
@@ -237,40 +263,43 @@ html {
   animation: shimmer 3s linear infinite;
 }
 
+/* Backdrop Blur Utilities */
 .backdrop-blur-elite {
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
+/* Glass Morphism */
 .glass-elite {
   @apply backdrop-blur-elite border-white/10 bg-white/5;
 }
 
+/* Elite Grid Background */
 .grid-background {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
+/* Radial Gradient Overlay */
 .radial-overlay {
   background: radial-gradient(circle at 30% 20%, rgba(202, 162, 74, 0.15), transparent 50%);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-feature-settings: "ss01", "ss02";
+/* Typography Fine-Tuning */
+h1, h2, h3, h4, h5, h6 {
+  font-feature-settings: 'ss01', 'ss02';
   text-rendering: optimizeLegibility;
 }
 
+/* Number Tabular */
 .tabular-nums {
   font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
+  font-feature-settings: 'tnum';
 }
 
+/* Link Styles */
 a {
   @apply transition-colors duration-200;
 }
@@ -279,6 +308,7 @@ a:focus-visible {
   @apply outline-2 outline-offset-4 outline-gold;
 }
 
+/* Focus Styles for Accessibility */
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
@@ -286,50 +316,25 @@ select:focus-visible {
   @apply outline-2 outline-offset-2 outline-gold;
 }
 
+/* Loading State */
 .skeleton {
   @apply animate-pulse bg-gradient-to-r from-charcoal via-charcoal/50 to-charcoal bg-[length:200%_100%];
   animation: shimmer 1.5s infinite;
 }
 
+/* Print Styles */
 @media print {
   body {
     background: white;
     color: black;
   }
-
+  
   .no-print {
     display: none;
   }
 }
 
+/* Dark Mode Overrides (if needed) */
 @media (prefers-color-scheme: light) {
-}
-
-/* Legacy utilities for existing pages */
-.section-title {
-  @apply text-2xl font-semibold tracking-tight text-offwhite md:text-3xl;
-}
-
-.section-subtitle {
-  @apply text-sm uppercase tracking-[0.32em] text-gold;
-}
-
-.card {
-  @apply rounded-2xl border border-white/10 bg-charcoal/70 p-6 shadow-glow transition duration-300 hover:-translate-y-1 hover:border-gold/40;
-}
-
-.button-primary {
-  @apply inline-flex items-center justify-center rounded-full border border-gold/60 bg-gold/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite transition hover:bg-gold/20;
-}
-
-.button-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite/80 transition hover:border-gold/40 hover:text-offwhite;
-}
-
-.badge {
-  @apply inline-flex items-center rounded-full border border-white/10 bg-charcoal/80 px-4 py-2 text-xs uppercase tracking-[0.28em] text-offwhite/70;
-}
-
-.glow-block {
-  background: linear-gradient(135deg, rgba(202, 162, 74, 0.2), rgba(202, 162, 74, 0));
+  /* Currently MET is dark-only, but structure for light mode if needed */
 }

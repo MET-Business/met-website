@@ -8,7 +8,7 @@ export default function Layout() {
     <div className="min-h-screen bg-ink text-offwhite">
       <div className="pointer-events-none fixed inset-0 bg-radial-glow" />
       <Header />
-      <main className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-10">
+      <main className="relative w-full pb-20 pt-10">
         <Outlet />
       </main>
       <Footer />

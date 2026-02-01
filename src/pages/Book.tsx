@@ -32,57 +32,59 @@ export default function Book() {
   const primaryMessage = isPartner ? PARTNER_MESSAGE : BOOKING_MESSAGE;
 
   return (
-    <div className="flex flex-col gap-12">
-      <Seo
-        title="Book a Ride"
-        description="Book a MET night ride through WhatsApp concierge for speed, clarity, and reliability."
-      />
+    <div className="mx-auto w-full max-w-6xl px-6">
+      <div className="flex flex-col gap-12">
+        <Seo
+          title="Book a Ride"
+          description="Book a MET night ride through WhatsApp concierge for speed, clarity, and reliability."
+        />
 
-      <section className="grid gap-6">
-        <p className="section-subtitle">Book</p>
-        <h1 className="section-title">Book a Ride</h1>
-        <p className="max-w-2xl text-base text-offwhite/75">
-          Booking is concierge-based via WhatsApp for speed, clarity, and reliability.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <button type="button" className={tabClass('book')} onClick={() => handleTabChange('book')}>
-            Book a Ride
-          </button>
-          <button type="button" className={tabClass('partner')} onClick={() => handleTabChange('partner')}>
-            Investor / Partner
-          </button>
-        </div>
-      </section>
-
-      {isPartner ? (
-        <section className="card">
-          <h2 className="text-lg font-semibold">Investor / Partner Inquiry</h2>
-          <p className="mt-4 text-sm text-offwhite/75">
-            MET works with capital partners, nightlife operators, garages, and strategic collaborators.
+        <section className="grid gap-6">
+          <p className="section-subtitle">Book</p>
+          <h1 className="section-title">Book a Ride</h1>
+          <p className="max-w-2xl text-base text-offwhite/75">
+            Booking is concierge-based via WhatsApp for speed, clarity, and reliability.
           </p>
-        </section>
-      ) : (
-        <section className="card">
-          <h2 className="text-lg font-semibold">Booking Template</h2>
-          <div className="mt-4 rounded-xl border border-white/10 bg-ink/60 p-4 text-sm text-offwhite/75">
-            <p>Date:</p>
-            <p>Pickup:</p>
-            <p>Drop-off:</p>
-            <p>Passengers:</p>
-            <p>Time:</p>
+          <div className="flex flex-wrap gap-3">
+            <button type="button" className={tabClass('book')} onClick={() => handleTabChange('book')}>
+              Book a Ride
+            </button>
+            <button type="button" className={tabClass('partner')} onClick={() => handleTabChange('partner')}>
+              Investor / Partner
+            </button>
           </div>
         </section>
-      )}
 
-      <div className="flex flex-wrap gap-4">
-        <a href={buildWhatsAppUrl(primaryMessage)} className="button-primary">
-          {isPartner ? 'Contact MET via WhatsApp' : 'Open WhatsApp Booking'}
-        </a>
-        {!isPartner && (
-          <a href={buildWhatsAppUrl(PARTNER_MESSAGE)} className="button-secondary">
-            Partner / Invest (WhatsApp)
-          </a>
+        {isPartner ? (
+          <section className="card">
+            <h2 className="text-lg font-semibold">Investor / Partner Inquiry</h2>
+            <p className="mt-4 text-sm text-offwhite/75">
+              MET works with capital partners, nightlife operators, garages, and strategic collaborators.
+            </p>
+          </section>
+        ) : (
+          <section className="card">
+            <h2 className="text-lg font-semibold">Booking Template</h2>
+            <div className="mt-4 rounded-xl border border-white/10 bg-ink/60 p-4 text-sm text-offwhite/75">
+              <p>Date:</p>
+              <p>Pickup:</p>
+              <p>Drop-off:</p>
+              <p>Passengers:</p>
+              <p>Time:</p>
+            </div>
+          </section>
         )}
+
+        <div className="flex flex-wrap gap-4">
+          <a href={buildWhatsAppUrl(primaryMessage)} className="button-primary">
+            {isPartner ? 'Contact MET via WhatsApp' : 'Open WhatsApp Booking'}
+          </a>
+          {!isPartner && (
+            <a href={buildWhatsAppUrl(PARTNER_MESSAGE)} className="button-secondary">
+              Partner / Invest (WhatsApp)
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
