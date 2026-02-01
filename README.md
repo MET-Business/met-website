@@ -38,7 +38,7 @@ The website is intentionally lightweight and fast.
 Typical stack (adjust if needed):
 
 - Frontend: HTML / CSS / JavaScript
-- Framework (if used): React / Vite / Next.js
+- Framework: React / Vite / Next.js
 - Styling: TailwindCSS or custom CSS
 - Assets: SVG / PNG branding assets
 - Deployment: Netlify / Vercel / Static hosting
@@ -50,9 +50,7 @@ The site is optimized for mobile-first nightlife users.
 ```
 met-website/
 ├── public/
-│   ├── images/
-│   ├── icons/
-│   └── favicon.ico
+|
 ├── src/
 │   ├── components/
 │   ├── pages/
@@ -67,7 +65,7 @@ met-website/
 
 ```
 # clone the repo
-git clone https://github.com/your-org/met-website.git
+git clone https://github.com/MET-Business/met-website.git
 
 # install dependencies
 npm install
@@ -79,7 +77,7 @@ npm run dev
 Then open:
 
 ```
-http://localhost:3000
+http://localhost:5173/
 ```
 
 ## 🎨 Branding Notes
