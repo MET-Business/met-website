@@ -1,33 +1,72 @@
 import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 
-const Home = lazy(() => import('./pages/HomeElite'));
+const Home = lazy(() => import('./pages/Home'));
 const Experience = lazy(() => import('./pages/Experience'));
 const HowItWorks = lazy(() => import('./pages/HowItWorks'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Book = lazy(() => import('./pages/Book'));
 
-function PageLoader() {
+function PageSkeleton() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="h-12 w-12 animate-spin rounded-full border-4 border-gold border-t-transparent" />
+    <div className="flex flex-col gap-6 pt-4" aria-label="Loading page">
+      <div className="skeleton h-8 w-48 rounded-lg" />
+      <div className="skeleton h-4 w-72 rounded-md" />
+      <div className="grid gap-4 mt-4 md:grid-cols-3">
+        <div className="skeleton h-40 rounded-2xl" />
+        <div className="skeleton h-40 rounded-2xl" />
+        <div className="skeleton h-40 rounded-2xl" />
+      </div>
     </div>
   );
 }
 
 export default function App() {
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/book" element={<Book />} />
-        </Route>
-      </Routes>
-    </Suspense>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/experience"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <Experience />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/how-it-works"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <HowItWorks />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/partners"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <Partners />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/book"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <Book />
+            </Suspense>
+          }
+        />
+      </Route>
+    </Routes>
   );
 }

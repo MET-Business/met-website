@@ -5,10 +5,10 @@ import FloatingWhatsAppButton from './FloatingWhatsAppButton';
 
 export default function Layout() {
   return (
-    <div className="min-h-screen bg-ink text-offwhite">
-      <div className="pointer-events-none fixed inset-0 bg-radial-glow" />
+    <div className="min-h-screen relative" style={{ backgroundColor: '#000' }}>
+      <div className="ambient-bg" aria-hidden="true" />
       <Header />
-      <main className="relative w-full pb-20 pt-10">
+      <main className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-24 pt-12">
         <Outlet />
       </main>
       <Footer />
