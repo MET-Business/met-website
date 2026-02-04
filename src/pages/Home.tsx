@@ -217,13 +217,6 @@ export default function Home() {
         <div className="pointer-events-none absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-cyan/10 blur-3xl" />
 
         <div className="hero-surface flex flex-col gap-6">
-          {/* Operating badges */}
-          <div className="flex flex-wrap gap-2.5">
-            <span className="badge">Nairobi Night Ops</span>
-            <span className="badge">Thu-Sun · 5 PM-5 AM</span>
-            <span className="badge">Westlands · Kilimani · Ngong Rd</span>
-          </div>
-
           {/* Main headline */}
           <h1 className="animate-fadeInUp font-display text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
             Night Transport,{' '}
@@ -265,6 +258,13 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Operating badges */}
+          <div className="flex flex-wrap gap-2.5">
+            <span className="badge">Nairobi Night Ops</span>
+            <span className="badge">Thu-Sun · 5 PM-5 AM</span>
+            <span className="badge">Westlands · Kilimani · Ngong Rd</span>
+          </div>
+
           {/* CTA buttons */}
           <div className="mt-2 flex flex-wrap gap-3">
             <a href={buildWhatsAppUrl(BOOKING_MESSAGE)} className="button-primary text-white">
@@ -292,10 +292,12 @@ export default function Home() {
         {/* Right column — snapshot card */}
         <div className="hero-surface flex flex-col gap-6">
           <div
-            className="rounded-2xl border border-white/8 p-6"
+            className="party-card party-float rounded-2xl border border-white/8 p-6"
             style={{ background: 'rgba(14,14,16,0.7)', backdropFilter: 'blur(8px)' }}
           >
-            <div className="glow-block flex h-full min-h-[280px] flex-col justify-between">
+            <div className="party-flicker-layer" aria-hidden="true" />
+            <div className="party-sparkles" aria-hidden="true" />
+            <div className="glow-block relative z-10 flex h-full min-h-[280px] flex-col justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em]" style={{ color: 'rgba(224,224,224,0.5)' }}>
                   MET Operating Snapshot

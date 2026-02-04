@@ -162,10 +162,27 @@ export default function Book() {
                 </button>
               ))}
             </div>
+
+            {bookingPromises.map((promise) => (
+              <div key={promise.title} className="card">
+                <div className="flex items-start gap-3">
+                  <span
+                    className="mt-1 inline-block h-2 w-2 rounded-full"
+                    style={{ background: promise.accent, boxShadow: `0 0 10px ${promise.accent}88` }}
+                  />
+                  <div>
+                    <h3 className="font-display text-base font-bold text-white">{promise.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.6)' }}>
+                      {promise.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="hero-surface grid gap-4">
-            <div className="media-frame aspect-[4/3]">
+          <div className="hero-surface flex">
+            <div className="media-frame h-full min-h-[520px] lg:min-h-[600px] w-full">
               <picture>
                 <source
                   type="image/webp"
@@ -185,22 +202,6 @@ export default function Book() {
               </picture>
               <div className="media-overlay hero" />
             </div>
-            {bookingPromises.map((promise) => (
-              <div key={promise.title} className="card">
-                <div className="flex items-start gap-3">
-                  <span
-                    className="mt-1 inline-block h-2 w-2 rounded-full"
-                    style={{ background: promise.accent, boxShadow: `0 0 10px ${promise.accent}88` }}
-                  />
-                  <div>
-                    <h3 className="font-display text-base font-bold text-white">{promise.title}</h3>
-                    <p className="mt-2 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.6)' }}>
-                      {promise.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </section>
       </AnimatedSection>

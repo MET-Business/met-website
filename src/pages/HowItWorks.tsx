@@ -136,10 +136,22 @@ export default function HowItWorks() {
               <span className="badge">Defined Zones</span>
               <span className="badge">Fixed Pricing Logic</span>
             </div>
+            {[
+              { label: 'Response', value: 'Fast WhatsApp confirmations during operating hours' },
+              { label: 'Dispatch', value: 'Driver assigned only after ride details are verified' },
+              { label: 'Support', value: 'One thread for ETA updates and adjustments' },
+            ].map((item) => (
+              <div key={item.label} className="card">
+                <p className="text-xs uppercase tracking-[0.24em]" style={{ color: 'rgba(224,224,224,0.5)' }}>
+                  {item.label}
+                </p>
+                <p className="mt-3 text-base font-semibold text-white">{item.value}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="hero-surface grid gap-4">
-            <div className="media-frame aspect-[3/4] max-h-[420px]">
+          <div className="hero-surface flex">
+            <div className="media-frame h-full min-h-[520px] lg:min-h-[600px] w-full">
               <picture>
                 <source
                   type="image/webp"
@@ -159,18 +171,6 @@ export default function HowItWorks() {
               </picture>
               <div className="media-overlay hero" />
             </div>
-            {[
-              { label: 'Response', value: 'Fast WhatsApp confirmations during operating hours' },
-              { label: 'Dispatch', value: 'Driver assigned only after ride details are verified' },
-              { label: 'Support', value: 'One thread for ETA updates and adjustments' },
-            ].map((item) => (
-              <div key={item.label} className="card">
-                <p className="text-xs uppercase tracking-[0.24em]" style={{ color: 'rgba(224,224,224,0.5)' }}>
-                  {item.label}
-                </p>
-                <p className="mt-3 text-base font-semibold text-white">{item.value}</p>
-              </div>
-            ))}
           </div>
         </section>
       </AnimatedSection>
