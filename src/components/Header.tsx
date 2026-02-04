@@ -1,6 +1,7 @@
 ﻿import { Link, NavLink } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import { buildWhatsAppUrl, BOOKING_MESSAGE } from '../config/whatsapp';
+import ThemeToggle from './ThemeToggle';
 
 type NavLinkItem = {
   to: string;
@@ -41,7 +42,9 @@ export default function Header() {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `text-xs font-display font-semibold tracking-[0.18em] uppercase transition-colors duration-200 ${
-      isActive ? 'text-white' : 'text-muted hover:text-white'
+      isActive
+        ? 'text-[color:var(--text-primary)]'
+        : 'text-[color:var(--text-muted)] hover:text-[color:var(--text-primary)]'
     }`;
 
   return (
@@ -59,7 +62,7 @@ export default function Header() {
             <img
               src="/METlogo.png"
               alt="MET logo"
-              className="h-10 w-auto"
+              className="h-10 w-auto no-invert"
               loading="eager"
               decoding="async"
             />
@@ -73,13 +76,16 @@ export default function Header() {
             ))}
           </nav>
 
-          <a
-            href={buildWhatsAppUrl(BOOKING_MESSAGE)}
-            className="hidden md:inline-flex button-primary text-white"
-            aria-label="Book a ride via WhatsApp"
-          >
-            <span>Book Now</span>
-          </a>
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-[color:var(--text-muted)] text-[color:var(--text-muted)] hover:text-[color:var(--text-primary)] transition-colors" />
+            <a
+              href={buildWhatsAppUrl(BOOKING_MESSAGE)}
+              className="button-primary"
+              aria-label="Book a ride via WhatsApp"
+            >
+              <span>Book Now</span>
+            </a>
+          </div>
 
           <button
             className="flex md:hidden flex-col justify-center items-center w-10 h-10 gap-1.5"
@@ -89,9 +95,9 @@ export default function Header() {
             aria-controls="mobile-nav"
             type="button"
           >
-            <span className="block w-5 h-0.5 bg-white rounded-full transition-all duration-300" />
-            <span className="block w-5 h-0.5 bg-white rounded-full transition-all duration-300" />
-            <span className="block w-3.5 h-0.5 bg-white/50 rounded-full transition-all duration-300" />
+            <span className="block w-5 h-0.5 bg-[color:var(--text-primary)] rounded-full transition-all duration-300" />
+            <span className="block w-5 h-0.5 bg-[color:var(--text-primary)] rounded-full transition-all duration-300" />
+            <span className="block w-3.5 h-0.5 bg-[color:var(--text-muted)] rounded-full transition-all duration-300" />
           </button>
         </div>
       </header>
@@ -107,7 +113,7 @@ export default function Header() {
           >
             <button
               onClick={closeMobile}
-              className="self-end mb-4 text-muted hover:text-white transition-colors"
+              className="self-end mb-4 text-[color:var(--text-muted)] hover:text-[color:var(--text-primary)] transition-colors"
               aria-label="Close menu"
               type="button"
             >
@@ -132,7 +138,9 @@ export default function Header() {
                 onClick={closeMobile}
                 className={({ isActive }) =>
                   `block font-display font-semibold tracking-[0.15em] uppercase text-sm transition-colors duration-200 px-3 py-2.5 rounded-lg ${
-                    isActive ? 'text-white bg-white/5' : 'text-muted hover:text-white hover:bg-white/5'
+                    isActive
+                      ? 'text-[color:var(--text-primary)] bg-white/5'
+                      : 'text-[color:var(--text-muted)] hover:text-[color:var(--text-primary)] hover:bg-white/5'
                   }`
                 }
               >
@@ -142,11 +150,13 @@ export default function Header() {
 
             <a
               href={buildWhatsAppUrl(BOOKING_MESSAGE)}
-              className="button-primary mt-4 self-start text-white"
+              className="button-primary mt-4 self-start"
               onClick={closeMobile}
             >
               <span>Book Now</span>
             </a>
+
+            <ThemeToggle className="mt-3 inline-flex items-center justify-center w-10 h-10 rounded-full border border-[color:var(--text-muted)] text-[color:var(--text-muted)] hover:text-[color:var(--text-primary)] transition-colors" />
           </aside>
         </>
       )}
