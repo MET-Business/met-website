@@ -8,7 +8,7 @@ export default function Layout() {
     <div className="min-h-screen relative" style={{ backgroundColor: '#000' }}>
       <div className="ambient-bg" aria-hidden="true" />
       <Header />
-      <main className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-24 pt-12">
+      <main className="relative z-10 mx-auto w-full max-w-[90rem] px-5 pb-24 pt-12">
         <Outlet />
       </main>
       <Footer />

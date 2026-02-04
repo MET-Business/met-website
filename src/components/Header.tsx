@@ -57,7 +57,7 @@ export default function Header() {
         }`}
         role="banner"
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5">
+        <div className="mx-auto flex max-w-[90rem] items-center justify-between px-5 py-3.5">
           <Link to="/" className="flex items-center gap-2.5" aria-label="MET Home">
             <img
               src="/METlogo.png"

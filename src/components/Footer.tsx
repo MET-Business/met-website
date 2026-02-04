@@ -25,7 +25,7 @@ export default function Footer() {
         }}
       />
 
-      <div className="mx-auto max-w-6xl px-5 py-12">
+      <div className="mx-auto max-w-[90rem] px-5 py-12">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div className="flex flex-col gap-3">
             <img src="/METlogo.png" alt="MET" className="h-12 w-auto max-w-[300px] object-contain opacity-80 no-invert" />
