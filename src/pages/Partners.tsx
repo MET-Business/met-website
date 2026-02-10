@@ -23,21 +23,21 @@ const categories: PartnerCategory[] = [
     accent: '#FF42A1',
     icon: 'C',
     description: 'Nightlife venues and event organizers who recommend MET to their patrons.',
-    partners: ['Milan', 'Alchemist', '1824', 'K1'],
+    partners: ['Partner venues', 'Event organizers', 'Community hosts'],
   },
   {
     title: 'Vehicle and Garage Partners',
     accent: '#B14BF4',
     icon: 'V',
     description: 'Car tuning and rental garages supplying branded, maintained fleet vehicles.',
-    partners: ['Car Planet', 'AutoXpress', 'Import Garage'],
+    partners: ['Fleet partners', 'Vehicle providers', 'Service garages'],
   },
   {
     title: 'Campus and Promoters',
     accent: '#00D2FF',
     icon: 'U',
     description: 'University campus promoters and private hosts driving young-professional demand.',
-    partners: ['Strathmore', 'USIU', 'KU', 'Daystar'],
+    partners: ['Campus communities', 'Student hosts', 'City groups'],
   },
 ];
 
@@ -53,8 +53,8 @@ const valueCards: ValueCard[] = [
     accent: '#FF42A1',
   },
   {
-    title: 'Revenue Alignment',
-    description: 'Structured revenue-sharing options for venues, promoters, and fleet partners.',
+    title: 'Partner Alignment',
+    description: 'Collaborative planning that prioritizes safe exits, reliable pickups, and smooth guest flow.',
     accent: '#00D2FF',
   },
   {
@@ -68,29 +68,29 @@ const onboardingSteps = [
   {
     step: '01',
     title: 'Discovery Call',
-    description: 'Define goals, coverage areas, and partnership requirements.',
+    description: 'Define goals, coverage areas, and collaboration needs.',
   },
   {
     step: '02',
     title: 'Pilot Design',
-    description: 'Agree on expected volume, KPIs, and operational touchpoints.',
+    description: 'Align on event cadence, pickup flow, and operational touchpoints.',
   },
   {
     step: '03',
     title: 'Launch + Monitoring',
-    description: 'Activate the partnership and review performance weekly.',
+    description: 'Activate the collaboration and review learnings regularly.',
   },
   {
     step: '04',
     title: 'Scale',
-    description: 'Expand vehicles, venues, or promotional reach based on results.',
+    description: 'Expand coverage, events, or coordination based on learnings.',
   },
 ];
 
 const faq = [
   {
     q: 'What types of partners do you prioritize?',
-    a: 'Nightlife venues, event organizers, garages, and capital partners aligned with late-night operations.',
+    a: 'Nightlife venues, event organizers, garages, and driver partners aligned with late-night operations.',
   },
   {
     q: 'How do partnerships create value?',
@@ -98,7 +98,7 @@ const faq = [
   },
   {
     q: 'Can we pilot before a long-term agreement?',
-    a: 'Yes. MET is built to validate partnerships through short pilot runs with clear KPIs.',
+    a: 'Yes. We can pilot collaboration with clear goals and feedback loops before any long-term commitment.',
   },
 ];
 

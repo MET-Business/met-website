@@ -27,7 +27,7 @@ The MET website is built to:
 - Present the MET brand and nightlife identity
 - Clearly communicate services and operating model
 - Convert visitors into bookings and inquiries
-- Serve as a reference for partners, investors, and collaborators
+- Serve as a reference for partners, venues, and collaborators
 
 This is not the booking backend — it is the public-facing brand and information layer.
 
@@ -105,7 +105,7 @@ Planned improvements:
 
 - Booking CTA integration (WhatsApp / App link)
 - Partner & club showcase
-- Investor overview page
+- Partner onboarding page
 - Night-pass & VIP package highlights
 - SEO and performance optimization
 

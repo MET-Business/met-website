@@ -131,10 +131,10 @@ const serviceTiers: ServiceTier[] = [
       'Seats up to 4 passengers',
       'Ambient lighting and curated music',
       'Professional night-shift driver',
-      'Fixed pricing within core zones',
+      'Transparent pricing confirmed in chat',
       'WhatsApp booking confirmation',
     ],
-    pricing: 'KES 1,700–2,200',
+    pricing: 'Varies by route and time',
     accent: '#00D2FF',
   },
   {
@@ -144,10 +144,10 @@ const serviceTiers: ServiceTier[] = [
       'Larger vehicle options (up to 7 passengers)',
       'Priority dispatch for group bookings',
       'Flexible pickup/drop-off coordination',
-      'Group discount pricing available',
+      'Group coordination options',
       'Event coordination support',
     ],
-    pricing: 'Custom quote',
+    pricing: 'Quote on request',
     accent: '#B14BF4',
     recommended: true,
   },
@@ -161,7 +161,7 @@ const serviceTiers: ServiceTier[] = [
       'Hourly or event-based booking',
       'White-glove service standard',
     ],
-    pricing: 'Premium rates',
+    pricing: 'Premium on request',
     accent: '#FF42A1',
   },
 ];
@@ -179,7 +179,7 @@ const designPrinciples: DesignPrinciple[] = [
   },
   {
     principle: 'Consistency Across Fleet',
-    explanation: 'Brand standards are enforced across all vehicles — partner or leased — to ensure predictable quality.',
+    explanation: 'Brand standards are enforced across all partnered vehicles to ensure predictable quality.',
     example: 'Every MET vehicle meets the same cleanliness, lighting, and amenity standards regardless of ownership.',
   },
 ];
@@ -573,7 +573,7 @@ export default function Experience() {
                 'Clean, maintained vehicle',
                 'Ambient interior lighting',
                 'Curated music options',
-                'Fixed pricing (no surge)',
+                'Transparent pricing confirmation',
                 'GPS tracking & safety',
                 'Group-ready seating',
               ].map((item) => (

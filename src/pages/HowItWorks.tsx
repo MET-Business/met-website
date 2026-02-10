@@ -46,7 +46,7 @@ const rules: Rule[] = [
   { label: 'Operating days', value: 'Thursday – Sunday' },
   { label: 'Operating hours', value: '5 PM – 5 AM' },
   { label: 'Core zones', value: 'Westlands – Kilimani – Ngong Road' },
-  { label: 'Pricing model', value: 'Fixed / semi-fixed, no surge surprises' },
+  { label: 'Pricing model', value: 'Pricing confirmed before dispatch' },
 ];
 
 const rideTypes = [
@@ -100,7 +100,7 @@ const faqs = [
   },
   {
     q: 'Do you operate outside core zones?',
-    a: 'Yes, at premium pricing based on distance and time. We confirm this before dispatch.',
+    a: 'Requests outside core zones may be available. We confirm availability and pricing before dispatch.',
   },
 ];
 

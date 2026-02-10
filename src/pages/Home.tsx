@@ -236,8 +236,8 @@ export default function Home() {
               <span className="mt-0.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple" 
                     style={{ boxShadow: '0 0 6px #B14BF4' }} />
               <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>
-                <span className="font-semibold text-white">Controlled fleet access</span> — leased and 
-                partner vehicles with consistent branding
+                <span className="font-semibold text-white">Controlled fleet access</span> — partnered vehicles 
+                with consistent branding and standards
               </p>
             </div>
             <div className="flex items-start gap-3">
@@ -252,8 +252,8 @@ export default function Home() {
               <span className="mt-0.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-pink" 
                     style={{ boxShadow: '0 0 6px #FF42A1' }} />
               <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>
-                <span className="font-semibold text-white">Fixed operating windows</span> — defined 
-                zones and hours for maximum reliability
+                <span className="font-semibold text-white">Nightlife-ready scheduling</span> — defined 
+                zones and clear confirmations for reliable pickups
               </p>
             </div>
           </div>
@@ -261,7 +261,7 @@ export default function Home() {
           {/* Operating badges */}
           <div className="flex flex-wrap gap-2.5">
             <span className="badge">Nairobi Night Ops</span>
-            <span className="badge">Thu-Sun · 5 PM-5 AM</span>
+            <span className="badge">Operating hours vary · confirm in booking</span>
             <span className="badge">Westlands · Kilimani · Ngong Rd</span>
           </div>
 
@@ -281,7 +281,7 @@ export default function Home() {
               <span>Book via WhatsApp</span>
             </a>
             <Link to="/book?intent=partner" className="button-secondary">
-              <span>Investor Overview</span>
+              <span>Partner with MET</span>
               <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -327,12 +327,13 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-wider" style={{ color: 'rgba(224,224,224,0.45)' }}>
                     Fleet Strategy
                   </p>
-                  <p className="mt-1 font-display text-base font-bold text-white">Asset-light leasing model</p>
+                  <p className="mt-1 font-display text-base font-bold text-white">Partnered, branded fleet</p>
                 </div>
 
                 <div className="rounded-xl border border-cyan/15 bg-cyan/5 p-3">
                   <p className="text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.75)' }}>
                     Built for predictability during Nairobi's most unpredictable hours.
+                    Operating hours may vary by day or event.
                   </p>
                 </div>
               </div>
@@ -347,43 +348,39 @@ export default function Home() {
       <AnimatedSection>
         <div className="grid gap-6">
           <div className="max-w-3xl">
-            <p className="section-subtitle">The Problem</p>
+            <p className="section-subtitle">Why MET Exists</p>
             <h2 className="section-title mt-2">The Night Transport Gap in Nairobi</h2>
             <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-              After 9 PM in Nairobi, the dynamics of urban transport shift dramatically. Ride availability 
-              declines, surge pricing becomes unpredictable, and drivers increasingly avoid certain routes, 
-              times, and passenger types. While large ride-hailing platforms excel at daytime commuting volume, 
-              they are not optimized for late-night security risk, group logistics, or the concentrated demand 
-              spikes that define nightlife movement.
+              After 9 PM, getting a reliable ride in Nairobi becomes a different game. Availability drops,
+              prices swing, and pickups become uncertain just when groups need clarity most.
             </p>
             <p className="mt-3 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-              This creates a structural service gap during the most economically active hours of Nairobi's 
-              night economy — leaving club-goers stranded, groups forced to split rides inefficiently, and 
-              safety compromised when reliable options simply aren't available.
+              MET exists to make late-night movement simple: clear confirmations, predictable pickups,
+              and a service built for nightlife, not rush hour.
             </p>
           </div>
 
           {/* Problem breakdown cards */}
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <ProblemCard
-              title="Driver Scarcity"
-              description="Night shift operations avoided due to perceived security risks and inadequate incentives"
-              stat="60-70% decline"
+              title="Low Late-Night Supply"
+              description="Fewer available drivers after dark means longer waits"
+              stat="Late-night dip"
             />
             <ProblemCard
-              title="Pricing Volatility"
-              description="Unpredictable surge multipliers that spike without warning during peak nightlife hours"
-              stat="3-5x surges"
+              title="Unclear Pricing"
+              description="Last-minute price swings leave groups unsure what they'll pay"
+              stat="Unpredictable"
             />
             <ProblemCard
-              title="Selective Acceptance"
-              description="Drivers declining trips based on destination, passenger count, or perceived risk factors"
+              title="Pickup Uncertainty"
+              description="Cancellations and vague ETAs make it hard to plan the night"
               stat="Common issue"
             />
             <ProblemCard
-              title="Group Fragmentation"
-              description="Parties forced to book multiple vehicles, losing cohesion and increasing per-person costs"
-              stat="Inefficient"
+              title="Split Groups"
+              description="Parties forced to book multiple rides lose cohesion and timing"
+              stat="Common pain"
             />
           </div>
 
@@ -403,10 +400,9 @@ export default function Home() {
               <div>
                 <p className="font-display text-base font-bold text-white">Why This Matters</p>
                 <p className="mt-2 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-                  Nairobi's nightlife economy spans Westlands, Kilimani, Ngong Road, and select Lang'ata 
-                  corridors — generating significant late-night transport demand that existing platforms 
-                  systematically underserve. MET exists to close this gap with operational discipline, 
-                  not gimmicks.
+                  Nairobi's nightlife economy spans Westlands, Kilimani, Ngong Road, and select Lang'ata
+                  corridors — and riders deserve a service that shows up when the city is still moving.
+                  MET closes that gap with reliable execution, not gimmicks.
                 </p>
               </div>
             </div>
@@ -420,26 +416,25 @@ export default function Home() {
       <AnimatedSection>
         <div className="flex flex-col gap-8">
           <div className="max-w-3xl">
-            <p className="section-subtitle">MET's Solution</p>
-            <h2 className="section-title mt-2">A Focused Operator, Not a Ride-Hailing App</h2>
+            <p className="section-subtitle">How MET Works</p>
+            <h2 className="section-title mt-2">Built for Nightlife, Not Rush Hour</h2>
             <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-              MET addresses the night transport gap through disciplined operations, controlled fleet access, 
-              and nightlife-specific service design. We are not attempting to compete with mass-market platforms 
-              on their terms — we operate in the window where their model breaks down.
+              MET is a focused night-transport operator. We run on clear operating hours, confirmed pricing,
+              and a concierge-led dispatch so rides stay predictable during the busiest nightlife windows.
             </p>
           </div>
 
           {/* Solution pillars */}
           <div className="grid gap-5 md:grid-cols-3">
             <FeatureCard
-              title="Controlled Operations"
-              description="Disciplined operating parameters ensure reliability when it matters most."
+              title="Nightlife Operating Window"
+              description="Clear hours and zones keep pickups fast and dependable."
               accentColor="#FF42A1"
               items={[
                 'Fixed hours: Thu–Sun, 5:00 PM – 5:00 AM',
                 'Defined nightlife zones (Westlands, Kilimani, Ngong Road)',
-                'Fixed or semi-fixed pricing logic — no algorithmic surprises',
-                'Controlled dispatch to prevent oversaturation',
+                'Pricing confirmed before dispatch — no surprises',
+                'Concierge dispatch keeps timing clear',
               ]}
               icon={
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -454,14 +449,14 @@ export default function Home() {
             />
 
             <FeatureCard
-              title="Asset-Light Fleet Strategy"
-              description="Partnership-based vehicle access reduces capital risk while maintaining brand consistency."
+              title="Partnered Fleet Standards"
+              description="Every MET vehicle follows the same comfort and cleanliness standards."
               accentColor="#B14BF4"
               items={[
-                'Leased or garage-partner vehicles',
-                'Brand consistency and maintenance standards enforced',
-                'Scalable without heavy asset lock-in',
-                'Flexible expansion or contraction based on demand',
+                'Branded, inspected vehicles',
+                'Consistent interior quality',
+                'Group-ready options',
+                'Reliable availability during peak hours',
               ]}
               icon={
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -476,13 +471,13 @@ export default function Home() {
             />
 
             <FeatureCard
-              title="Professional Night Drivers"
-              description="Vetted, trained, and incentivized specifically for late-night operations."
+              title="Night-Shift Professionals"
+              description="Drivers trained for nightlife service and safety."
               accentColor="#00D2FF"
               items={[
                 'Background checks and night-shift vetting',
                 'Training on nightlife-specific scenarios and safety protocols',
-                'Reliability incentives and performance tracking',
+                'Reliability incentives and quality checks',
                 'Clear escalation procedures for incidents',
               ]}
               icon={
@@ -509,9 +504,8 @@ export default function Home() {
               <div className="flex-1">
                 <p className="font-display text-base font-bold text-white">What Makes MET Different</p>
                 <p className="mt-2 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-                  MET treats night transport as a specialized service requiring different operational logic, 
-                  not as an extension of daytime commuting. We optimize for reliability during high-risk hours, 
-                  not maximum vehicle utilization across all times and zones. This focus is our competitive advantage.
+                  MET treats night transport as its own service. We optimize for reliable pickups,
+                  clear communication, and safe arrivals during the hours most services struggle with.
                 </p>
               </div>
             </div>
@@ -528,8 +522,8 @@ export default function Home() {
             <p className="section-subtitle">Operating Model</p>
             <h2 className="section-title mt-2">How MET Operates</h2>
             <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-              Clear operational parameters create predictability for both customers and investors. 
-              MET's model is designed for disciplined execution, not rapid experimentation.
+              Clear operational parameters create predictability for riders and partner venues. 
+              MET is designed for consistent execution, not constant change.
             </p>
           </div>
 
@@ -548,7 +542,7 @@ export default function Home() {
                 Core operations: Westlands, Kilimani, Ngong Road
               </p>
               <p className="mt-1.5 text-base" style={{ color: 'rgba(224,224,224,0.5)' }}>
-                Other areas served at premium pricing
+                Pricing varies by route and time; confirm in booking
               </p>
             </div>
 
@@ -607,134 +601,133 @@ export default function Home() {
       </AnimatedSection>
 
       {/* ================================================================
-          UNIT ECONOMICS — Investor-grade transparency
+          QUALITY STANDARDS — What to expect
       ================================================================ */}
       <AnimatedSection>
         <div className="flex flex-col gap-6">
           <div className="max-w-3xl">
-            <p className="section-subtitle">Unit Economics</p>
-            <h2 className="section-title mt-2">Built for Early Profitability</h2>
+            <p className="section-subtitle">Quality Standards</p>
+            <h2 className="section-title mt-2">What You Can Expect Every Ride</h2>
             <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-              MET's financial model is designed for rapid path to cash-flow positivity with conservative 
-              assumptions. Pilot economics demonstrate viability before significant capital deployment.
+              MET is built around clear service standards that make late-night rides feel safe, premium, and 
+              predictable. We keep the experience consistent across every vehicle, every shift.
             </p>
           </div>
 
-          {/* Financial metrics */}
+          {/* Experience standards */}
           <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
             <StatCard
-              label="Pilot Fleet Size"
-              value="2–3 vehicles"
-              description="Start lean, prove model"
+              label="Fleet Readiness"
+              value="Night-ready vehicles"
+              description="Cleaned, checked, and branded before shift"
             />
             <StatCard
-              label="Monthly Revenue"
-              value="~KES 1.0M+"
-              description="Pilot phase target"
+              label="Confirmation"
+              value="Human concierge"
+              description="Clear ETA and pickup details"
             />
             <StatCard
-              label="Operating Costs"
-              value="~KES 875K"
-              description="Monthly OPEX estimate"
+              label="Pricing"
+              value="Transparent, upfront"
+              description="Pricing varies by route/time; confirm in booking"
             />
             <StatCard
-              label="Target Margin"
-              value="18–20%"
-              description="After OPEX, pre-tax"
+              label="Safety"
+              value="Vetted drivers"
+              description="Background checks and safety protocols"
             />
             <StatCard
-              label="Break-even Timeline"
-              value="2–3 months"
-              description="Cash-flow positive"
+              label="Availability"
+              value="Demand-based"
+              description="Service availability subject to demand"
             />
           </div>
 
-          {/* Cost breakdown */}
+          {/* Experience breakdown */}
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-white/8 p-6" style={{ background: 'rgba(14,14,16,0.5)' }}>
-              <h3 className="font-display text-base font-bold text-white">Monthly Revenue Streams</h3>
+              <h3 className="font-display text-base font-bold text-white">Ride Experience Standards</h3>
               <div className="mt-4 space-y-3">
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Standard trips (6/night × 20 nights)</p>
-                  <p className="font-display text-base font-bold text-white">~KES 612K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Clean, fresh interiors</p>
+                  <p className="font-display text-base font-bold text-white">Always</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Hourly/private bookings</p>
-                  <p className="font-display text-base font-bold text-white">~KES 200K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Tasteful lighting + music</p>
+                  <p className="font-display text-base font-bold text-white">Standard</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Club/event partnerships</p>
-                  <p className="font-display text-base font-bold text-white">~KES 150K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Group-friendly seating</p>
+                  <p className="font-display text-base font-bold text-white">Available</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>VIP experiences</p>
-                  <p className="font-display text-base font-bold text-white">~KES 116K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Flexible pickup coordination</p>
+                  <p className="font-display text-base font-bold text-white">By request</p>
                 </div>
                 <div className="border-t border-white/10 pt-3 flex items-center justify-between">
-                  <p className="font-display text-xs font-bold uppercase tracking-wider text-cyan">Total Monthly</p>
-                  <p className="font-display text-base font-bold text-cyan">~KES 1.078M</p>
+                  <p className="font-display text-xs font-bold uppercase tracking-wider text-cyan">Overall Focus</p>
+                  <p className="font-display text-base font-bold text-cyan">Consistency</p>
                 </div>
               </div>
             </div>
 
             <div className="rounded-2xl border border-white/8 p-6" style={{ background: 'rgba(14,14,16,0.5)' }}>
-              <h3 className="font-display text-base font-bold text-white">Monthly Operating Costs</h3>
+              <h3 className="font-display text-base font-bold text-white">Safety + Support</h3>
               <div className="mt-4 space-y-3">
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Driver salaries (3 × KES 45K)</p>
-                  <p className="font-display text-base font-bold text-white">KES 135K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Driver vetting and training</p>
+                  <p className="font-display text-base font-bold text-white">Required</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Fuel costs</p>
-                  <p className="font-display text-base font-bold text-white">KES 400K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Live location sharing</p>
+                  <p className="font-display text-base font-bold text-white">Available</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Vehicle lease/partnership</p>
-                  <p className="font-display text-base font-bold text-white">KES 200K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Support line for issues</p>
+                  <p className="font-display text-base font-bold text-white">Active</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Insurance, licensing, admin</p>
-                  <p className="font-display text-base font-bold text-white">KES 90K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Clear rider guidelines</p>
+                  <p className="font-display text-base font-bold text-white">Shared</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Marketing & operations</p>
-                  <p className="font-display text-base font-bold text-white">KES 50K</p>
+                  <p className="text-base" style={{ color: 'rgba(224,224,224,0.65)' }}>Incident escalation</p>
+                  <p className="font-display text-base font-bold text-white">Defined</p>
                 </div>
                 <div className="border-t border-white/10 pt-3 flex items-center justify-between">
-                  <p className="font-display text-xs font-bold uppercase tracking-wider text-pink">Total Monthly OPEX</p>
-                  <p className="font-display text-base font-bold text-pink">~KES 875K</p>
+                  <p className="font-display text-xs font-bold uppercase tracking-wider text-pink">Service Promise</p>
+                  <p className="font-display text-base font-bold text-pink">Safe + Reliable</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Financial disclaimer */}
+          {/* Public disclaimer */}
           <p className="text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.4)' }}>
-            Financial projections represent pilot-phase assumptions based on conservative utilization targets 
-            and verified Nairobi nightlife demand patterns. Actual results will vary based on operational execution, 
-            market conditions, and partnership development.
+            Pricing varies by route and time; confirm in booking. Operating hours may vary by day or event. 
+            Ride availability is subject to demand.
           </p>
         </div>
       </AnimatedSection>
 
       {/* ================================================================
-          INVESTMENT HIGHLIGHTS — Why invest in MET
+          WHY MET — Public-facing highlights
       ================================================================ */}
       <AnimatedSection>
         <div className="flex flex-col gap-6">
           <div className="max-w-3xl">
-            <p className="section-subtitle">Investment Thesis</p>
-            <h2 className="section-title mt-2">Why MET Deserves Capital</h2>
+            <p className="section-subtitle">Why MET</p>
+            <h2 className="section-title mt-2">Why Riders Choose MET</h2>
             <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-              MET offers investors exposure to Nairobi's growing night economy through a disciplined, 
-              asset-light model with clear path to profitability and scalability.
+              MET is built for nightlife reliability — a focused service designed to get groups home safely, 
+              on time, and with a premium experience that matches the night.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             <HighlightCard
-              title="Asset-Light Fleet Strategy"
-              sub="Leased and partner vehicles reduce capital requirements and asset risk while maintaining brand consistency and operational control. Scalable without heavy lock-in."
+              title="Partnered Fleet Standards"
+              sub="Every MET vehicle follows the same cleanliness, branding, and service standards for a consistent experience."
               icon={
                 <svg className="h-6 w-6 text-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -742,8 +735,8 @@ export default function Home() {
               }
             />
             <HighlightCard
-              title="Defined Operating Windows"
-              sub="Thu–Sun, 5 PM–5 AM operations ensure maximum vehicle utilization during peak demand. Fixed schedule eliminates idle time and optimizes driver efficiency."
+              title="Nightlife-Ready Scheduling"
+              sub="We operate around nightlife demand, with clear confirmations and concierge coordination for reliable pickups."
               icon={
                 <svg className="h-6 w-6 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -751,8 +744,8 @@ export default function Home() {
               }
             />
             <HighlightCard
-              title="Geographic Focus"
-              sub="Concentrated operations in Westlands, Kilimani, and Ngong Road nightlife zones allow for efficient dispatch, driver familiarity, and partnership density."
+              title="Familiar Coverage"
+              sub="We focus on key nightlife corridors like Westlands, Kilimani, and Ngong Road for faster, more reliable service."
               icon={
                 <svg className="h-6 w-6 text-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
@@ -760,8 +753,8 @@ export default function Home() {
               }
             />
             <HighlightCard
-              title="Rapid Path to Profitability"
-              sub="Conservative financial model shows pilot break-even in 2–3 months with 18–20% margins. Cash-flow positive before significant expansion."
+              title="Reliable Experience"
+              sub="From booking to drop-off, the focus is safety, clarity, and a premium ride that feels effortless."
               icon={
                 <svg className="h-6 w-6 text-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -770,7 +763,7 @@ export default function Home() {
             />
           </div>
 
-          {/* Growth trajectory */}
+          {/* Service focus */}
           <div className="rounded-2xl border border-cyan/20 bg-cyan/5 p-6">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 rounded-full bg-cyan/20 p-2">
@@ -779,11 +772,11 @@ export default function Home() {
                 </svg>
               </div>
               <div className="flex-1">
-                <p className="font-display text-base font-bold text-white">3-Year Growth Trajectory</p>
+                <p className="font-display text-base font-bold text-white">Service Focus</p>
                 <p className="mt-2 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-                  <span className="font-semibold text-white">Year 1 (Pilot):</span> 2–3 vehicles → KES 3.5M annual profit · 
-                  <span className="font-semibold text-white ml-2">Year 2 (Expansion):</span> 7 vehicles → KES 7M profit · 
-                  <span className="font-semibold text-white ml-2">Year 3 (Scale):</span> 12 vehicles → KES 14M profit
+                  <span className="font-semibold text-white">Tonight:</span> reliable pickups in core zones with clear confirmations.
+                  <span className="font-semibold text-white ml-2">Growing:</span> deeper partner coordination and smoother group handling.
+                  <span className="font-semibold text-white ml-2">Ahead:</span> expanded coverage based on demand and rider feedback.
                 </p>
               </div>
             </div>
@@ -797,11 +790,11 @@ export default function Home() {
       <AnimatedSection>
         <div className="flex flex-col gap-6">
           <div className="max-w-3xl">
-            <p className="section-subtitle">Pilot Readiness</p>
-            <h2 className="section-title mt-2">Operational Foundations in Place</h2>
+            <p className="section-subtitle">Safety + Operations</p>
+            <h2 className="section-title mt-2">Built for Consistent Nights</h2>
             <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.7)' }}>
-              MET is not a concept — core operating procedures, partnership frameworks, and safety protocols 
-              have been defined and documented. The pilot phase validates economics, not viability.
+              MET runs with clear processes so every ride feels consistent. Driver standards, fleet care,
+              and safety protocols are in place to keep nights smooth and reliable.
             </p>
           </div>
 
@@ -809,23 +802,23 @@ export default function Home() {
             {[
               {
                 item: 'Driver vetting and night-shift protocols',
-                status: 'Defined and documented',
-                description: 'Background checks, training curriculum, and reliability incentive structure',
+                status: 'In place',
+                description: 'Background checks, training curriculum, and reliability incentives',
               },
               {
                 item: 'Garage and vehicle partnership model',
-                status: 'Defined and documented',
-                description: 'Lease terms, maintenance SLAs, branding requirements, and partnership economics',
+                status: 'In place',
+                description: 'Maintenance standards, branding requirements, and safety checks',
               },
               {
                 item: 'Fixed pricing logic and zone controls',
-                status: 'Defined and documented',
-                description: 'Base fares, surge prevention, premium zone pricing, and group discount structure',
+                status: 'In place',
+                description: 'Clear pricing confirmations, zone coverage, and group coordination',
               },
               {
                 item: 'Safety escalation and incident handling',
-                status: 'Defined and documented',
-                description: 'Emergency protocols, customer support channels, and driver accountability measures',
+                status: 'In place',
+                description: 'Emergency protocols, customer support channels, and accountability',
               },
             ].map(({ item, status, description }) => (
               <div key={item} className="card flex gap-4">
@@ -864,8 +857,8 @@ export default function Home() {
       <AnimatedSection>
         <div className="flex flex-col gap-6">
           <div className="max-w-3xl">
-            <p className="section-subtitle">Early Validation</p>
-            <h2 className="section-title mt-2">What Early Users & Partners Say</h2>
+            <p className="section-subtitle">Testimonials</p>
+            <h2 className="section-title mt-2">What Riders & Partners Say</h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1fr]">
@@ -896,9 +889,9 @@ export default function Home() {
               role="Club Manager, Kilimani"
             />
             <TestimonialCard
-              quote="As an investor, I appreciate the disciplined approach. This isn't a moonshot — it's a real business solving a real problem with conservative economics."
+              quote="MET keeps our group together and the pickup is always clear. It feels like a premium service built for nights out."
               author="Patricia N."
-              role="Early-Stage Investor"
+              role="Weekend Rider"
             />
           </div>
         </div>
@@ -918,11 +911,11 @@ export default function Home() {
             {[
               {
                 q: 'How is MET different from Uber or Bolt?',
-                a: 'MET is not a mass-market ride-hailing platform. We operate exclusively during nightlife hours (Thu–Sun, 5 PM–5 AM) with controlled fleet access, professional night-shift drivers, and fixed pricing. Our focus is reliability during high-risk hours, not maximum utilization across all times.',
+                a: 'MET is not a mass-market ride-hailing platform. We operate exclusively during nightlife hours (Thu–Sun, 5 PM–5 AM) with controlled fleet access, professional night-shift drivers, and pricing confirmed before dispatch. Our focus is reliable pickups when the city is still moving.',
               },
               {
                 q: 'Why WhatsApp booking instead of an app?',
-                a: 'Concierge-based WhatsApp booking reduces friction, allows for clear communication, and eliminates app development costs during the pilot phase. Manual confirmation ensures quality control and enables personalized service. An app may be introduced post-pilot based on demand.',
+                a: 'Concierge-based WhatsApp booking keeps communication clear and fast, especially during nightlife rush. Manual confirmation ensures accurate pickup details and a reliable ETA.',
               },
               {
                 q: 'What makes your drivers different?',
@@ -934,11 +927,11 @@ export default function Home() {
               },
               {
                 q: 'What are the operating zones?',
-                a: 'Core zones are Westlands, Kilimani, and Ngong Road — the primary nightlife corridors in Nairobi. Trips outside these zones are accepted at premium pricing. Geographic focus allows for efficient dispatch and driver familiarity.',
+                a: 'Core zones are Westlands, Kilimani, and Ngong Road — the primary nightlife corridors in Nairobi. Requests outside core zones may be available; confirm availability and pricing in booking.',
               },
               {
                 q: 'How does pricing work?',
-                a: 'MET uses fixed or semi-fixed pricing based on route and time. No algorithmic surge pricing. Group bookings and hourly packages are available. Pricing is transparent and communicated upfront via WhatsApp confirmation.',
+                a: 'Pricing is confirmed upfront based on route and time. No surprise surges — you receive a clear confirmation before dispatch. Pricing varies by route/time; confirm in booking.',
               },
             ].map(({ q, a }, index) => (
               <details key={index} className="group rounded-2xl border border-white/8 bg-charcoal/50 p-5 transition-colors hover:border-white/15">
@@ -988,9 +981,9 @@ export default function Home() {
                 Predictability in the Most <span className="text-gradient-brand">Unpredictable</span> Hours
               </h2>
               <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.75)', maxWidth: '520px' }}>
-                Whether you're booking a night ride or evaluating MET as an investment opportunity — we deliver 
-                control, safety, and consistent service during Nairobi's peak nightlife hours. No hype, no 
-                gimmicks — just disciplined operations and real economics.
+                Whether you're booking a night ride or planning a group outing — we deliver control, safety, 
+                and consistent service during Nairobi's peak nightlife hours. No hype, no gimmicks — just 
+                a premium ride that shows up on time.
               </p>
 
               {/* Value props */}
@@ -1061,7 +1054,7 @@ export default function Home() {
                 <span>Book via WhatsApp</span>
               </a>
               <Link to="/book?intent=partner" className="button-secondary w-full text-center md:w-auto">
-                <span>Investor Overview</span>
+                <span>Partner with MET</span>
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

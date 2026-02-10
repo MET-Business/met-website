@@ -27,8 +27,8 @@ const bookingPromises = [
     accent: '#B14BF4',
   },
   {
-    title: 'Fixed Pricing Logic',
-    description: 'Transparent fares aligned to route and time. Zero surprise surges at checkout.',
+    title: 'Pricing Confirmation',
+    description: 'Transparent pricing confirmed before dispatch. No surprises at pickup.',
     accent: '#00D2FF',
   },
   {
@@ -54,15 +54,15 @@ const bookingSteps = [
 ];
 
 const partnerReasons = [
-  'Access to a disciplined, nightlife-focused operator with defined operating windows.',
+  'Access to a disciplined, nightlife-focused operator built for reliable late-night movement.',
   'Consistent brand standards across vehicles and chauffeurs.',
-  'Clear partnership economics and expansion milestones.',
+  'Clear expectations, brand standards, and support.',
 ];
 
 const faqs = [
   {
     q: 'How far in advance should I book?',
-    a: 'Same-day bookings are welcome, but we recommend at least 1–2 hours ahead during peak weekend windows for best availability.',
+    a: 'Same-day bookings are welcome, but we recommend at least 1-2 hours ahead during peak weekend windows for best availability.',
   },
   {
     q: 'Can MET handle group rides?',
@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'What areas do you cover?',
-    a: 'Core zones are Westlands, Kilimani, and Ngong Road. Extended trips are accepted at premium pricing.',
+    a: 'Core zones are Westlands, Kilimani, and Ngong Road. Requests outside core zones may be available; confirm in booking.',
   },
   {
     q: 'What happens if I need to update my booking?',
@@ -132,7 +132,7 @@ export default function Book() {
               <p className="section-subtitle">Book</p>
               <h1 className="section-title mt-2">Book a MET Night Ride</h1>
               <p className="text-base mt-3 max-w-xl" style={{ color: 'rgba(224,224,224,0.7)' }}>
-                Fast, concierge-led WhatsApp booking designed for Nairobi nightlife. Clear confirmations, fixed pricing logic, and
+                Fast, concierge-led WhatsApp booking designed for Nairobi nightlife. Clear confirmations, transparent pricing, and
                 vetted drivers from request to drop-off.
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function Book() {
             <div className="flex flex-wrap gap-2.5" role="tablist" aria-label="Booking type">
               {[
                 { id: 'book', label: 'Book a Ride' },
-                { id: 'partner', label: 'Investor / Partner' },
+                { id: 'partner', label: 'Partner / Driver' },
               ].map(({ id, label }) => (
                 <button
                   key={id}
@@ -247,14 +247,14 @@ export default function Book() {
                 >
                   P
                 </span>
-                <h2 className="font-display text-base font-bold text-white">Investor / Partner Inquiry</h2>
+                <h2 className="font-display text-base font-bold text-white">Partner / Driver Inquiry</h2>
               </div>
               <p className="text-base leading-relaxed" style={{ color: 'rgba(224,224,224,0.65)' }}>
-                MET works with capital partners, nightlife operators, garages, and strategic collaborators. Send us a WhatsApp
-                message and our team will respond with next steps and the full investor overview.
+                MET works with venues, event organizers, garages, and driver partners. Send us a WhatsApp
+                message and our team will respond with next steps.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {['Capital Partners', 'Nightlife Operators', 'Garages', 'Strategic Collaborators'].map((tag) => (
+                {['Venues', 'Event Organizers', 'Garages', 'Driver Partners'].map((tag) => (
                   <span
                     key={tag}
                     className="text-base px-2.5 py-1 rounded-full"
@@ -393,7 +393,7 @@ export default function Book() {
           </a>
           {!isPartner && (
             <a href={buildWhatsAppUrl(PARTNER_MESSAGE)} className="button-secondary">
-              Partner / Invest
+              Partner with MET
             </a>
           )}
         </div>
